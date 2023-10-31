@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Image} from "react-native";
+import { StyleSheet, Text, View, Image, Button} from "react-native";
 
 export default function Dados({ navigation }) {
     return (
@@ -10,6 +10,8 @@ export default function Dados({ navigation }) {
           style={styles.imageCurriculo}
         />
         <Text style={styles.centerText}>Currículo</Text>
+        <Button title="Home" onPress={() => navigation.navigate('Home')}>
+        </Button>
         <StatusBar style="auto" />
       </View>
     );
@@ -32,5 +34,6 @@ export default function Dados({ navigation }) {
       width: 100,
       height: 50,
       fontSize: 20,
+      textAlign: 'center',
     },
   });
